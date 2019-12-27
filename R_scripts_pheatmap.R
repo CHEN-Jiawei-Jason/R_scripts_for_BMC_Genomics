@@ -18,7 +18,7 @@ colnames(anno1)=c("Group")
 #colnames(anno1)=c("Group")
 
 data4<-as.matrix(data4)
-drows<-vegdist(data4,method="bray")#计算bray-curtis距离，也可以使用dist欧氏距离代替
+drows<-vegdist(data4,method="bray")
 dcols<-vegdist(t(data4),method="bray")
 pheatmap(data4,cellwidth = 25, cellheight =8, treeheight_row = 0, cluster_rows = F,cluster_cols = F,
          treeheight_col = 10 ,color = colorRampPalette(c("yellow","firebrick3"))(100), scale="row", legend=TRUE,border_color=NA,fontsize_row=8, 
